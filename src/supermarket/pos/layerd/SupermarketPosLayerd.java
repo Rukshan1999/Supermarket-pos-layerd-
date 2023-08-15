@@ -4,6 +4,8 @@
  */
 package supermarket.pos.layerd;
 
+import supermarket.pos.layerd.view.LayoutView;
+
 /**
  *
  * @author thari
@@ -14,7 +16,7 @@ public class SupermarketPosLayerd {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        System.out.println("Hello");
+        new LayoutView().setVisible(true);
     }
     
 }
