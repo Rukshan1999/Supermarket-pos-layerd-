@@ -37,7 +37,7 @@ public class LayoutView extends javax.swing.JFrame {
         headerPanel.setBackground(new java.awt.Color(202, 50, 252));
 
         headerLabel.setBackground(new java.awt.Color(202, 50, 252));
-        headerLabel.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        headerLabel.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         headerLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         headerLabel.setText("Supermarket");
 

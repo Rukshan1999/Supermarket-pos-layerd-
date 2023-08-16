@@ -101,6 +101,9 @@
       <SubComponents>
         <Component class="javax.swing.JLabel" name="manageCusLabel">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="95" red="e4" type="rgb"/>
+            </Property>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="14" style="1"/>
             </Property>
@@ -136,8 +139,8 @@
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                       <Component id="cusIDTextField" alignment="0" max="32767" attributes="0"/>
                                       <Component id="nameTextField" max="32767" attributes="0"/>
-                                      <Component id="addressTextField4" max="32767" attributes="0"/>
-                                      <Component id="cityTextField6" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="addressTextField" max="32767" attributes="0"/>
+                                      <Component id="cityTextField" alignment="0" max="32767" attributes="0"/>
                                       <Component id="ziPTextField" min="-2" pref="159" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -160,8 +163,8 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="1" pref="1" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="dOBTextField3" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="salaryTextField5" max="32767" attributes="0"/>
+                                      <Component id="dOBTextField" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="salaryTextField" max="32767" attributes="0"/>
                                       <Component id="provinceTextField" alignment="0" min="-2" pref="165" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -192,19 +195,19 @@
                       <Component id="cusIDLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="nameTextField" alignment="3" min="-2" pref="16" max="-2" attributes="0"/>
                       <Component id="cusIDLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="dOBTextField3" alignment="3" min="-2" pref="16" max="-2" attributes="0"/>
+                      <Component id="dOBTextField" alignment="3" min="-2" pref="16" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="cusIDLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="addressTextField4" alignment="3" min="-2" pref="16" max="-2" attributes="0"/>
+                      <Component id="addressTextField" alignment="3" min="-2" pref="16" max="-2" attributes="0"/>
                       <Component id="cusIDLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="salaryTextField5" alignment="3" min="-2" pref="16" max="-2" attributes="0"/>
+                      <Component id="salaryTextField" alignment="3" min="-2" pref="16" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="cusIDLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="cityTextField6" alignment="3" min="-2" pref="16" max="-2" attributes="0"/>
+                      <Component id="cityTextField" alignment="3" min="-2" pref="16" max="-2" attributes="0"/>
                       <Component id="cusIDLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="provinceTextField" alignment="3" min="-2" pref="16" max="-2" attributes="0"/>
                   </Group>
@@ -257,7 +260,7 @@
             <Property name="text" type="java.lang.String" value="Title"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="dOBTextField3">
+        <Component class="javax.swing.JTextField" name="dOBTextField">
         </Component>
         <Component class="javax.swing.JLabel" name="cusIDLabel3">
           <Properties>
@@ -267,7 +270,7 @@
             <Property name="text" type="java.lang.String" value="DOB"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="addressTextField4">
+        <Component class="javax.swing.JTextField" name="addressTextField">
         </Component>
         <Component class="javax.swing.JLabel" name="cusIDLabel4">
           <Properties>
@@ -277,7 +280,7 @@
             <Property name="text" type="java.lang.String" value="Address"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="salaryTextField5">
+        <Component class="javax.swing.JTextField" name="salaryTextField">
         </Component>
         <Component class="javax.swing.JLabel" name="cusIDLabel5">
           <Properties>
@@ -287,7 +290,7 @@
             <Property name="text" type="java.lang.String" value="Salary"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="cityTextField6">
+        <Component class="javax.swing.JTextField" name="cityTextField">
         </Component>
         <Component class="javax.swing.JLabel" name="cusIDLabel6">
           <Properties>
@@ -349,6 +352,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="SAVE CUSTOMER"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton3ActionPerformed"/>
+          </Events>
         </Component>
         <Container class="javax.swing.JPanel" name="tablePanel">
           <Properties>

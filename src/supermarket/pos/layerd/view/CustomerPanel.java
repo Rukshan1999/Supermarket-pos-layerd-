@@ -4,16 +4,23 @@
  */
 package supermarket.pos.layerd.view;
 
-/**
- *
- * @author thari
- */
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+import supermarket.pos.layerd.controller.CustomerController;
+import supermarket.pos.layerd.dto.CustomerDto;
+
+
+    
+
 public class CustomerPanel extends javax.swing.JPanel {
 
-    /**
-     * Creates new form CustomerPanel
-     */
+    private CustomerController customerController;
+    
+    
     public CustomerPanel() {
+        
+        customerController = new CustomerController();
         initComponents();
     }
 
@@ -39,13 +46,13 @@ public class CustomerPanel extends javax.swing.JPanel {
         cusIDLabel1 = new javax.swing.JLabel();
         titleTextField = new javax.swing.JTextField();
         cusIDLabel2 = new javax.swing.JLabel();
-        dOBTextField3 = new javax.swing.JTextField();
+        dOBTextField = new javax.swing.JTextField();
         cusIDLabel3 = new javax.swing.JLabel();
-        addressTextField4 = new javax.swing.JTextField();
+        addressTextField = new javax.swing.JTextField();
         cusIDLabel4 = new javax.swing.JLabel();
-        salaryTextField5 = new javax.swing.JTextField();
+        salaryTextField = new javax.swing.JTextField();
         cusIDLabel5 = new javax.swing.JLabel();
-        cityTextField6 = new javax.swing.JTextField();
+        cityTextField = new javax.swing.JTextField();
         cusIDLabel6 = new javax.swing.JLabel();
         provinceTextField = new javax.swing.JTextField();
         cusIDLabel7 = new javax.swing.JLabel();
@@ -86,6 +93,7 @@ public class CustomerPanel extends javax.swing.JPanel {
 
         headerPanel.setBackground(new java.awt.Color(255, 255, 255));
 
+        manageCusLabel.setBackground(new java.awt.Color(228, 149, 255));
         manageCusLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         manageCusLabel.setText("Manage Customer");
 
@@ -140,6 +148,11 @@ public class CustomerPanel extends javax.swing.JPanel {
         jButton3.setBackground(new java.awt.Color(252, 251, 251));
         jButton3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jButton3.setText("SAVE CUSTOMER");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         tablePanel.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -193,8 +206,8 @@ public class CustomerPanel extends javax.swing.JPanel {
                                 .addGroup(formPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(cusIDTextField)
                                     .addComponent(nameTextField)
-                                    .addComponent(addressTextField4)
-                                    .addComponent(cityTextField6)
+                                    .addComponent(addressTextField)
+                                    .addComponent(cityTextField)
                                     .addComponent(ziPTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addComponent(cusIDLabel6)
                             .addComponent(cusIDLabel1)
@@ -213,8 +226,8 @@ public class CustomerPanel extends javax.swing.JPanel {
                             .addGroup(formPanelLayout.createSequentialGroup()
                                 .addGap(1, 1, 1)
                                 .addGroup(formPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(dOBTextField3)
-                                    .addComponent(salaryTextField5)
+                                    .addComponent(dOBTextField)
+                                    .addComponent(salaryTextField)
                                     .addComponent(provinceTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                 .addGap(239, 239, 239))
             .addGroup(formPanelLayout.createSequentialGroup()
@@ -236,17 +249,17 @@ public class CustomerPanel extends javax.swing.JPanel {
                     .addComponent(cusIDLabel1)
                     .addComponent(nameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(cusIDLabel3)
-                    .addComponent(dOBTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(dOBTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(formPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cusIDLabel4)
-                    .addComponent(addressTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(addressTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(cusIDLabel5)
-                    .addComponent(salaryTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(salaryTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(formPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cusIDLabel6)
-                    .addComponent(cityTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cityTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(cusIDLabel7)
                     .addComponent(provinceTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
@@ -282,10 +295,14 @@ public class CustomerPanel extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        addCustomer();
+    }//GEN-LAST:event_jButton3ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField addressTextField4;
-    private javax.swing.JTextField cityTextField6;
+    private javax.swing.JTextField addressTextField;
+    private javax.swing.JTextField cityTextField;
     private javax.swing.JLabel cusIDLabel;
     private javax.swing.JLabel cusIDLabel1;
     private javax.swing.JLabel cusIDLabel2;
@@ -296,7 +313,7 @@ public class CustomerPanel extends javax.swing.JPanel {
     private javax.swing.JLabel cusIDLabel7;
     private javax.swing.JLabel cusIDLabel8;
     private javax.swing.JTextField cusIDTextField;
-    private javax.swing.JTextField dOBTextField3;
+    private javax.swing.JTextField dOBTextField;
     private javax.swing.JButton deleteButton;
     private javax.swing.JPanel formPanel;
     private javax.swing.JPanel headerPanel;
@@ -311,9 +328,47 @@ public class CustomerPanel extends javax.swing.JPanel {
     private javax.swing.JLabel manageCusLabel;
     private javax.swing.JTextField nameTextField;
     private javax.swing.JTextField provinceTextField;
-    private javax.swing.JTextField salaryTextField5;
+    private javax.swing.JTextField salaryTextField;
     private javax.swing.JPanel tablePanel;
     private javax.swing.JTextField titleTextField;
     private javax.swing.JTextField ziPTextField;
     // End of variables declaration//GEN-END:variables
+
+    private void addCustomer() {
+        
+        try {
+            //Create Customer DTO
+            
+            CustomerDto customerDto = new CustomerDto(
+                    cusIDTextField.getText(),
+                    titleTextField.getText(),
+                    nameTextField.getText(),
+                    dOBTextField.getText(),
+                    Double.parseDouble(salaryTextField.getText()),
+                    addressTextField.getText(),
+                    cityTextField.getText(),
+                    provinceTextField.getText(),
+                    ziPTextField.getText());
+            
+            
+            String result = customerController.addCustomer(customerDto);
+            JOptionPane.showMessageDialog(this, result);
+        } catch (Exception ex) {
+            Logger.getLogger(CustomerPanel.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(this, ex.getMessage());
+        }
+    }
+    
+     private void clear(){
+        cusIDTextField.setText("");
+        titleTextField.setText("");
+        nameTextField.setText("");
+        dOBTextField.setText("");
+        salaryTextField.setText("");
+        addressTextField.setText("");
+        cityTextField.setText("");
+        provinceTextField.setText("");
+        ziPTextField.setText("");
+        
+    }
 }
